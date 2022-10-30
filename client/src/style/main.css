@@ -1,0 +1,23 @@
+.tab-list {
+    @apply grid grid-cols-3 gap-2 py-4 rounded-lg transition-all;
+}
+
+.tab-list > li {
+    @apply bg-gray-100 h-64 flex flex-col justify-center items-center relative cursor-pointer rounded-lg overflow-hidden hover:border-blue-200 border-2 border-gray-100 hover:text-blue-400 transition-all;
+}
+
+.tab-list > li.expanded {
+    @apply bg-white;
+}
+
+.tab-list > li > span {
+    @apply absolute left-0 top-0 w-full h-full bg-blue-100 p-4 text-center flex flex-col justify-center opacity-0 scale-110 transition-all text-black;
+}
+
+.tab-list > li > p {
+    @apply font-semibold;
+}
+
+.tab-list > li.expanded > span {
+    @apply opacity-100 scale-100;
+}

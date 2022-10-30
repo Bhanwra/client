@@ -1,0 +1,10 @@
+.auth-wrapper {
+    display: flex;
+    background-color: gainsboro;
+}
+
+.auth-wrapper > .auth-panel {
+    max-width: 16rem;
+    padding: 1rem;
+    background-color: white;
+}
