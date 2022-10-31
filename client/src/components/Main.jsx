@@ -51,7 +51,12 @@ export default class Main extends Component {
                     name: "Google Business",
                     desc: "This would allow us to create and promote the business profile on Google Maps and Search."
                 }
-            ]
+            ],
+            costs: {
+                web: 1800,
+                seo: 500,
+                design: 500
+            }
         }
     }
 
@@ -95,7 +100,7 @@ export default class Main extends Component {
                     
                     <TextSection
                         title={"Demographic"}
-                        description={"The target demographic for research and analysis has been set right between where today's Millenials and Gen X are, at around 29-50 years of age."}
+                        description={"The target demographic for research and analysis has been set right between where today's Millenials and Gen X are, at around 29-50 years of age. A broader age range has been selected initially, and would be adjusted as per the outcome of Google Analytics findings."}
                     >
                         <div className="relative pb-5">
                             <div className="bg-gray-300 h-3 rounded-full relative my-5">
@@ -135,16 +140,21 @@ export default class Main extends Component {
                     <TextSection title={"Cost"}>
                         <div className="grid grid-cols-2">
                             <div className="p-3 border">Website Creation <small>(Theme Development, Chatbot Integration, Mailer Setup etc.)</small></div>
-                            <div className="p-3 border">$-</div>
+                            <div className="p-3 border">${this.state.costs.web}</div>
                         </div>
                         <div className="grid grid-cols-2">
                             <div className="p-3 border">Initial SEO and Marketing <small>(excl. platform specific cost and fees)</small></div>
-                            <div className="p-3 border">$-</div>
+                            <div className="p-3 border">${this.state.costs.seo}</div>
                         </div>
                         <div className="grid grid-cols-2">
-                            <div className="p-3 border">Graphic Design</div>
-                            <div className="p-3 border">$-</div>
+                            <div className="p-3 border">Graphic Design <small>(Logo, Social Media Posts, and Ad Templates)</small></div>
+                            <div className="p-3 border">${this.state.costs.design}</div>
                         </div>
+                        <div className="grid grid-cols-2 font-bold">
+                            <div className="p-3 border">Total</div>
+                            <div className="p-3 border">${ this.state.costs.web + this.state.costs.seo + this.state.costs.design  }</div>
+                        </div>
+                        <p className="mt-2">Costs associated with any vendor software to be levied by the owner.</p>
                     </TextSection>
 
                     <TextSection title={"Time Estimate"}>
